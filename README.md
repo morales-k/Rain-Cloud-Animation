@@ -1,0 +1,1 @@
+An animated rain cloud built using HTML and CSS.

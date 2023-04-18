@@ -1,0 +1,86 @@
+#cloudContainer {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.puff {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #63686d;
+  z-index: 2;
+}
+
+.puff:nth-of-type(2), .puff:nth-of-type(3) {
+  width: 145px;
+  height: 145px;
+  top: 40px;
+}
+
+.puff:nth-of-type(2) {
+  left: 105px;
+}
+
+.puff:nth-of-type(3) {
+  left: -105px;
+}
+
+.drop {
+  width: 20px;
+  height: 25px;
+  background-color: #4d89c4;
+  border: 2px solid #366da4;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 10px;
+  rotate: -45deg;                
+  animation: drop 6s ease-in forwards,
+             squish 6s linear alternate-reverse infinite;
+  position: relative;
+  top: 40%;
+}
+
+.drop2 {
+  left: 67px;
+  top: 25%;
+}
+
+.drop3 {
+  left: -75px;
+  top: -28%;
+}
+
+.drop4 {
+  left: -27px;
+  top: -4%;
+}
+
+.drop5 {
+  left: 35px;
+  top: -20%;
+}
+
+@keyframes drop {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-120px, 120px);
+  }
+}
+
+@keyframes squish {
+  0% {
+    border-bottom-left-radius: 100%;
+  }
+
+  100% {
+    border-bottom-left-radius: 50%;
+  }
+}
